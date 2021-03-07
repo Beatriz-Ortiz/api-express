@@ -45,8 +45,8 @@ const all = async (req, res) => {
 
 // GET
 const get = async (req, res) => {
-  const id = req.params.dni;
-  const user = await User.findById(id);
+  const dni = req.params.dni;
+  const user = await User.find({ dni: dni });
 
   const response = {
     status: "success",
@@ -63,11 +63,8 @@ const update = async (req, res) => {
   const dni = req.params.dni;
   const data = req.body;
 
-  const user = await User.findBydni(dni);
-  user.name = data.name;
-  user.age = data.age;
-  user.dni = data.dni;
-  const userData = await user.save();
+  const filter = { dni: dni };
+  const userData = await User.findOneAndUpdate(filter, data);
 
   const response = {
     status: "success",

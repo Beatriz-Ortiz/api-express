@@ -55,4 +55,5 @@ _Herramientas utilizadas durante la realización del proyecto_
 - [NodeJS](https://nodejs.org/en/)
 - [Nodemon](https://nodemon.io/)
 - [Morgan](https://www.npmjs.com/package/morgan)
+- [Mongosee](https://mongoosejs.com/)
 - [Postman](https://www.postman.com/)
