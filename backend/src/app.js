@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
+// Connection to mongoDB
 mongoose
   .connect("mongodb://localhost/backend")
   .then((db) => console.log("Connected to DB"))
@@ -19,8 +20,9 @@ app.use(express.json());
 app.use("/", routes.users);
 
 // Statics file
+// TODO
 
-// Liste port
+// Listen port
 app.listen(app.get("port"), () => {
   console.log("Server on port: ", app.get("port"));
 });

@@ -3,7 +3,7 @@ const controller = require("../controllers");
 
 const router = express.Router();
 
-// Definicion de todas las routes
+// Definition of all CRUD routes
 router.post("/userCreate", controller.users.create);
 router.get("/userAll", controller.users.all);
 router.get("/userGet/:dni", controller.users.get);

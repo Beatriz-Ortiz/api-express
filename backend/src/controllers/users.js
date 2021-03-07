@@ -1,4 +1,4 @@
-// Routes asociadas con users
+// Routes associated with users
 const { User } = require("../models");
 
 // CREATE
